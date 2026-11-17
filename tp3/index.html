@@ -9,7 +9,11 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <!-- CSS boostrap -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
 
+        <!-- librairie Javascript de boostrap pour pouvoir utiliser les composants interactifs (modal https://getbootstrap.com/docs/5.1/components/modal/ , collapse...) -->
+        <script src="js/bootstrap.bundle.js"></script>
         <style>
           body{
               background-color: #e9ebee;              
@@ -18,16 +22,70 @@
               margin: 0 auto;
               max-width: 800px;              
           }
+          input + .icon-ok {
+              display: none;
+            }
+        form{
+            background-color: #8080802b;
+            padding: 10px;
+            border-radius: 4px;
+        }
         </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
+
     </head>
-    <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+    <body>
+        <div class="container">
+          <!-- Content here -->
+         
+            <h1>TP3</h1>
+            <form action="" method="get">
+              <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Nom</label>
+              <input type="text" class="form-control form-control-sm" name="name" id="name"><span class="icon-ok">✔</span>
+              <br>
+              <label for="firstname" class="col-sm-2 col-form-label col-form-label-sm">Prenom</label>
+              <input type="text" name="firstname" class="form-control form-control-sm" id="firstname"><span class="icon-ok">✔</span>
+              <br>
+              <label for="birthday" class="col-sm-2 col-form-label col-form-label-sm">Date de naissance</label>
+              <input type="date" name="birthday" class="form-control form-control-sm"  id="birthday"><span class="icon-ok">✔</span>
+              <br>
+              <label for="address" class="col-sm-2 col-form-label col-form-label-sm">Adresse</label>
+              <input type="text" name="address" class="form-control form-control-sm"  id="address"><span class="icon-ok">✔</span>
+              <br>
+              <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+              <input type="email" name="email" class="form-control form-control-sm"  id="email"><span class="icon-ok">✔</span>
+              <br>
+              <input type="submit" name="submit" class="btn btn-primary">
+            </form>
+            <!-- Add your site or application content here -->
+            <p>Hello world! This is HTML5 Boilerplate.</p>
+            <img src="../galilee.png" alt="Logo Galilee"/>
+        </div>
+        <div
+          class="modal fade"
+          id="myModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="js/form-validation.js"></script>    
     </body>
 </html>
